@@ -30,10 +30,10 @@ data "terraform_remote_state" "alb_zone_id" {
 module "domain" {
   source = "../../../module/domain/route53"
 
-  zone_id   = var.zone_id
-  zone_name = var.zone_name
+  zone_id      = var.zone_id
+  zone_name    = var.zone_name
   alb_dns_name = data.terraform_remote_state.alb_dns_name.outputs.alb_dns_name
-  alb_zone_id = data.terraform_remote_state.alb_zone_id.outputs.alb_zone_id
+  alb_zone_id  = data.terraform_remote_state.alb_zone_id.outputs.alb_zone_id
 }
 
 ##Cert

@@ -26,19 +26,6 @@ variable "regions" {
   }
 }
 
-##Security Group CIDR
-variable "operation_sg_1_cidr" {
-  default = ["0.0.0.0/0"]
-}
-
-variable "operation_sg_2_cidr" {
-  default = ["0.0.0.0/0"]
-}
-
-variable "operation_sg_3_cidr" {
-  default = ["0.0.0.0/0"]
-}
-
 ##EC2
 variable "ami" {
   description = "ID of AMI to use for ec2 instance"
@@ -66,14 +53,3 @@ variable "volume_size" {
   description = "Root block device size of EC2"
   default     = 100
 }
-
-variable "key_name" {
-  description = "Key pair's name"
-  type        = string
-}
-
-variable "public_key_path" {
-  description = "Public key path. For example: ~/.ssh/terraform.pub"
-  type        = string
-}
-

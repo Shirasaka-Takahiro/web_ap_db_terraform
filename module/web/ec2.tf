@@ -31,9 +31,3 @@ resource "aws_eip" "eip_ec2" {
     Name = "${var.general_config["project"]}-${var.general_config["env"]}-${format("eip%02d", count.index + 1)}"
   }
 }
-
-##Key Pair
-resource "aws_key_pair" "key" {
-  key_name   = var.key_name
-  public_key = file(var.public_key_path)
-}

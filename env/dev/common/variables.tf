@@ -86,3 +86,27 @@ variable "private_subnets" {
     }
   }
 }
+
+##Security Group CIDR
+variable "operation_sg_1_cidr" {
+  default = ["0.0.0.0/0"]
+}
+
+variable "operation_sg_2_cidr" {
+  default = ["0.0.0.0/0"]
+}
+
+variable "operation_sg_3_cidr" {
+  default = ["0.0.0.0/0"]
+}
+
+##Key Pair
+variable "key_name" {
+  description = "Key pair's name"
+  type        = string
+}
+
+variable "public_key_path" {
+  description = "Public key path. For example: ~/.ssh/terraform.pub"
+  type        = string
+}
