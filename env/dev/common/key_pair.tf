@@ -4,5 +4,5 @@ module "key_pair" {
 
   general_config  = var.general_config
   key_name        = var.key_name
-  public_key_path = module.public_key_path
+  public_key_path = var.public_key_path
 }

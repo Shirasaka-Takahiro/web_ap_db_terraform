@@ -29,5 +29,5 @@ module "web" {
   alb_https_sg_id = data.terraform_remote_state.alb_https_sg_id.outputs.alb_https_sg_id
   instance_ids    = module.web.instance_ids
   vpc_id          = data.terraform_remote_state.vpc_id.outputs.vpc_id
-  cert_alb_arn    = data.terraform_remote_state.cert_alb_arn.outputs.cert_alb_arn
+  #cert_alb_arn    = data.terraform_remote_state.cert_alb_arn.outputs.cert_alb_arn
 }
