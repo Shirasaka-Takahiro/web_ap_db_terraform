@@ -53,18 +53,18 @@ resource "aws_lb_listener" "alb_http_listener" {
 }
 
 #HTTPS Listener
-resource "aws_lb_listener" "alb_https_listener" {
-  load_balancer_arn = aws_lb.alb.arn
- port              = "443"
-  protocol          = "HTTPS"
-  ssl_policy        = "ELBSecurityPolicy-2016-08"
-  certificate_arn   = var.cert_alb_arn
+#resource "aws_lb_listener" "alb_https_listener" {
+#  load_balancer_arn = aws_lb.alb.arn
+# port              = "443"
+#  protocol          = "HTTPS"
+#  ssl_policy        = "ELBSecurityPolicy-2016-08"
+#  certificate_arn   = var.cert_alb_arn
 
-  default_action {
-    type             = "forward"
-    target_group_arn = aws_lb_target_group.tg.arn
-  }
-}
+#  default_action {
+#    type             = "forward"
+#    target_group_arn = aws_lb_target_group.tg.arn
+#  }
+#}
 
 ##Attach target group to the alb
 resource "aws_lb_target_group_attachment" "attach_tg_to_alb" {

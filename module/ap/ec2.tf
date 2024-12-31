@@ -6,7 +6,7 @@ resource "aws_instance" "ap" {
   vpc_security_group_ids = [
     var.internal_sg_id
   ]
-  key_name      = aws_key_pair.key.id
+  key_name      = var.key_name
   instance_type = var.instance_type
   root_block_device {
     volume_type = var.volume_type
@@ -16,10 +16,4 @@ resource "aws_instance" "ap" {
   tags = {
     Name = "${var.general_config["project"]}-${var.general_config["env"]}-${format("ap%02d", count.index + 1)}"
   }
-}
-
-##Key Pair
-resource "aws_key_pair" "key" {
-  key_name   = var.key_name
-  public_key = file(var.public_key_path)
 }

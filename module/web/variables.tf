@@ -12,9 +12,8 @@ variable "instance_type" {}
 variable "volume_type" {}
 variable "volume_size" {}
 variable "key_name" {}
-variable "public_key_path" {}
 variable "vpc_id" {}
 variable "alb_http_sg_id" {}
 variable "alb_https_sg_id" {}
-variable "cert_alb_arn" {}
+#variable "cert_alb_arn" {}
 variable "instance_ids" {}

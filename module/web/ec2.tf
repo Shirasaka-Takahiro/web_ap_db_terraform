@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
     var.operation_sg_2_id,
     var.operation_sg_3_id
   ]
-  key_name      = aws_key_pair.key.id
+  key_name      = var.key_name
   instance_type = var.instance_type
   root_block_device {
     volume_type = var.volume_type
