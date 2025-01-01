@@ -9,3 +9,10 @@ variable "instance_type" {}
 variable "volume_type" {}
 variable "volume_size" {}
 variable "key_name" {}
+variable "topic_name" {}
+variable "sns_email" {
+  type = list(string)
+}
+variable "instance_ids" {}
+variable "cwa_actions" {}
+variable "sns_topic_arn" {}

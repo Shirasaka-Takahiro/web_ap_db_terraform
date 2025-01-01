@@ -30,4 +30,15 @@ module "web" {
   instance_ids    = module.web.instance_ids
   vpc_id          = data.terraform_remote_state.vpc_id.outputs.vpc_id
   #cert_alb_arn    = data.terraform_remote_state.cert_alb_arn.outputs.cert_alb_arn
+
+  ##SNS
+  topic_name = var.topic_name
+  sns_email  = var.sns_email
+
+  ##CloudWatch
+  alb_name       = module.web.alb_name
+  sns_topic_arn  = module.web.sns_topic_arn
+  cwa_actions    = var.cwa_actions
+  tg_arn_suffix  = module.web.tg_arn_suffix
+  alb_arn_suffix = module.web.alb_arn_suffix
 }

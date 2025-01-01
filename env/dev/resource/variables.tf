@@ -34,7 +34,7 @@ variable "ami" {
 
 variable "ec2_count" {
   description = "Number of EC2 instance"
-  default     = "1"
+  default     = "2"
 }
 
 variable "instance_type" {
@@ -105,6 +105,24 @@ variable "allocated_storage" {
 
 variable "multi_az" {
   description = "multi az of db instance"
+  type        = string
+  default     = "false"
+}
+
+##SNS
+variable "topic_name" {
+  description = "email address for sns"
+  type        = string
+}
+
+variable "sns_email" {
+  description = "email address for sns"
+  type        = list(string)
+}
+
+##CloudWatch
+variable "cwa_actions" {
+  description = "CloudWatch alearm actions"
   type        = string
   default     = "false"
 }

@@ -25,3 +25,7 @@ output "alb_zone_id" {
 output "tg_arn_suffix" {
   value = aws_lb_target_group.tg.arn_suffix
 }
+
+output "sns_topic_arn" {
+  value = aws_sns_topic.default_topic.arn
+}

@@ -12,4 +12,13 @@ module "ap" {
   instance_type      = var.instance_type
   volume_type        = var.volume_type
   volume_size        = var.volume_size
+
+  ##SNS
+  topic_name = var.topic_name
+  sns_email  = var.sns_email
+
+  ##CloudWatch
+  instance_ids  = module.ap.instance_ids
+  sns_topic_arn = module.ap.sns_topic_arn
+  cwa_actions   = var.cwa_actions
 }

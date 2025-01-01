@@ -17,3 +17,12 @@ variable "alb_http_sg_id" {}
 variable "alb_https_sg_id" {}
 #variable "cert_alb_arn" {}
 variable "instance_ids" {}
+variable "topic_name" {}
+variable "sns_email" {
+  type = list(string)
+}
+variable "cwa_actions" {}
+variable "sns_topic_arn" {}
+variable "alb_name" {}
+variable "alb_arn_suffix" {}
+variable "tg_arn_suffix" {}
