@@ -15,7 +15,7 @@ ACM
 <br />
 SNS
 <br />
-CloudWatch x3
+CloudWatch
 <br />
 
 ■Order to apply
