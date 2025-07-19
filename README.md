@@ -28,4 +28,4 @@ CloudWatch x3
 
 ■Properties
 1. Seperating statefiles to common,domain,monitor and resource
-2. Importing several mudule resources from statefiles by using terraform_remote_state
+2. Importing several mudule resources from tfstatefiles by using terraform_remote_state
