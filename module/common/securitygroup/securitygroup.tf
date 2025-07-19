@@ -1,10 +1,10 @@
 ##Security Group
 resource "aws_security_group" "default" {
-  name   = "${var.general_config["project"]}-${var.general_config["env"]}-${var.sg_role}-sg"
+  name   = "${var.general_config["project"]}-${var.general_config["env"]}-${var.sg_role}-sg01"
   vpc_id = var.vpc_id
 
   tags = {
-    Name = "${var.general_config["project"]}-${var.general_config["env"]}-${var.sg_role}-sg"
+    Name = "${var.general_config["project"]}-${var.general_config["env"]}-${var.sg_role}-sg01"
   }
 
 }
